@@ -1,0 +1,23 @@
+﻿{
+    "figure_slug":  "cross_domain_stress_figure",
+    "mode":  "prompt-to-figure",
+    "package_root":  "examples/lightweight",
+    "public_example_note": "This is a lightweight public example. Large PPTX/SVG/raw Image2/transparent asset files are intentionally omitted; paths show the full package contract.",
+    "final_pptx":  "06_editable_pptx/cross_domain_stress_figure.pptx",
+    "final_svg":  "07_svg_export/cross_domain_stress_figure.svg",
+    "preview_pptx":  "08_previews/preview_pptx.png",
+    "preview_svg":  "08_previews/preview_svg.png",
+    "comparison_master_vs_editable":  "08_previews/comparison_master_vs_editable.png",
+    "selected_master":  null,
+    "raw_master":  "02_image2_master/master_raw/image2_master_raw.png",
+    "rejected_or_buggy_master":  "02_image2_master/rejected_or_buggy/image2_master_with_unwanted_text_bug.png",
+    "transparent_asset_dir":  "04_assets_cutout/transparent_png/",
+    "asset_manifest":  "09_manifests/asset_manifest.json",
+    "editability_manifest":  "09_manifests/editability_manifest.json",
+    "qa_notes":  "10_qa/QA_notes.md",
+    "known_issues":  [
+                         "Image2 master contains unwanted generated text and is not used as final background",
+                         "Image2 icon sheet required robust chroma cleanup because background was not perfectly flat",
+                         "Transparent PNG assets are not path-editable; SVG wrappers are containers only"
+                     ]
+}
