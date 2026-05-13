@@ -1,0 +1,35 @@
+# Large generated work packages
+scientific_figure_workflow_packages/
+scientific_figure_workflow_test/
+
+# Local Image2 / Codex caches
+generated_images/
+.codex/
+*.tmp
+tmp/
+temp/
+
+# Heavy generated deliverables are excluded from examples by default
+examples/**/*.pptx
+examples/**/*.ppt
+examples/**/*.tiff
+examples/**/*.tif
+examples/**/_archive/
+examples/**/02_image2_master/
+examples/**/03_assets_raw/
+examples/**/04_assets_cutout/transparent_png/
+examples/**/05_assets_vector/svg_wrappers/
+
+# OS/editor noise
+Thumbs.db
+Desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# Secrets
+.env
+*.key
+*.pem
+auth.json
+secrets.*
