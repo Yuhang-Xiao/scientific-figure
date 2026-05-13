@@ -1,0 +1,7 @@
+interface:
+  display_name: "Scientific Figure Workflow"
+  short_description: "Editable top-journal scientific figures."
+  default_prompt: "Use $scientific-figure-workflow to either draw a new scientific figure from a prompt or convert an existing PNG/JPG diagram into editable PPTX/SVG."
+
+policy:
+  allow_implicit_invocation: true
