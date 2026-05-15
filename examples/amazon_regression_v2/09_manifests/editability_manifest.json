@@ -1,0 +1,56 @@
+{
+  "figure_slug": "amazon_deforestation_drought_threshold",
+  "native_editable_elements": [
+    "Chinese titles and labels",
+    "section title bars and panel frames",
+    "left numbered badges",
+    "map legend labels and swatches",
+    "evapotranspiration arrows",
+    "moisture transport arrows",
+    "dashed cascade paths",
+    "threshold line and warning mark",
+    "right result cards",
+    "bottom conclusion box"
+  ],
+  "transparent_image_assets": [
+    "04_assets_cutout/transparent_png/warming_earth_thermometer.png",
+    "04_assets_cutout/transparent_png/amazon_deforestation_map.png",
+    "04_assets_cutout/transparent_png/forest_evapotranspiration_scene.png",
+    "04_assets_cutout/transparent_png/deforested_agriculture_road_patch.png",
+    "04_assets_cutout/transparent_png/healthy_rainforest_state.png",
+    "04_assets_cutout/transparent_png/degraded_savanna_state.png",
+    "04_assets_cutout/transparent_png/rain_cloud.png",
+    "04_assets_cutout/transparent_png/healthy_forest_panorama.png",
+    "04_assets_cutout/transparent_png/deforested_dry_panorama.png",
+    "04_assets_cutout/transparent_png/cascade_amazon_map.png",
+    "04_assets_cutout/transparent_png/conservation_leaf_shield.png"
+  ],
+  "svg_wrappers": [
+    "05_assets_vector/svg_wrappers/warming_earth_thermometer.svg",
+    "05_assets_vector/svg_wrappers/amazon_deforestation_map.svg",
+    "05_assets_vector/svg_wrappers/forest_evapotranspiration_scene.svg",
+    "05_assets_vector/svg_wrappers/deforested_agriculture_road_patch.svg",
+    "05_assets_vector/svg_wrappers/healthy_rainforest_state.svg",
+    "05_assets_vector/svg_wrappers/degraded_savanna_state.svg",
+    "05_assets_vector/svg_wrappers/rain_cloud.svg",
+    "05_assets_vector/svg_wrappers/healthy_forest_panorama.svg",
+    "05_assets_vector/svg_wrappers/deforested_dry_panorama.svg",
+    "05_assets_vector/svg_wrappers/cascade_amazon_map.svg",
+    "05_assets_vector/svg_wrappers/conservation_leaf_shield.svg"
+  ],
+  "true_vectorized_candidates": [],
+  "non_editable_or_limited_elements": [
+    "Transparent PNG internals are not path-editable",
+    "SVG wrappers embed PNG data and are not true path vectors"
+  ],
+  "reference_guided_asset_gate": {
+    "status": "passed",
+    "note": "New assets and reused generated assets are mapped to master roles and bboxes."
+  },
+  "no_coarse_asset_gate": {
+    "status": "passed",
+    "note": "Fine inventory records panels, subpanels, icons, routes, legends, title bars, and state cards instead of broad panels only."
+  },
+  "no_master_or_source_regions_used_as_assets": true,
+  "public_example_note": "Transparent asset paths show the full package contract; PNG assets themselves are not included in this lightweight example."
+}

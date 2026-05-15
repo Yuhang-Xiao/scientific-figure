@@ -1,51 +1,67 @@
-﻿{
-    "figure_slug":  "cross_domain_stress_figure",
-    "mode":  "prompt-to-figure regression; also includes image-to-editable source mapping reference",
-    "native_editable_elements":  [
-                                     "PPTX/SVG section panels and headers",
-                                     "PPTX/SVG text labels including bilingual labels",
-                                     "PPTX/SVG arrows and connectors",
-                                     "PPTX/SVG route nodes and cards",
-                                     "PPTX/SVG figure title and footer"
-                                 ],
-    "transparent_image_assets":  [
-                                     "04_assets_cutout/transparent_png/01_environment_sensor_cutout.png",
-                                     "04_assets_cutout/transparent_png/02_agriculture_plant_cutout.png",
-                                     "04_assets_cutout/transparent_png/03_medical_translation_cutout.png",
-                                     "04_assets_cutout/transparent_png/04_ai_chip_cutout.png",
-                                     "04_assets_cutout/transparent_png/05_materials_lattice_cutout.png",
-                                     "04_assets_cutout/transparent_png/06_clean_engineering_cutout.png"
-                                 ],
-    "svg_wrappers":  [
-                         "05_assets_vector/svg_wrappers/01_environment_sensor_cutout.svg",
-                         "05_assets_vector/svg_wrappers/02_agriculture_plant_cutout.svg",
-                         "05_assets_vector/svg_wrappers/03_medical_translation_cutout.svg",
-                         "05_assets_vector/svg_wrappers/04_ai_chip_cutout.svg",
-                         "05_assets_vector/svg_wrappers/05_materials_lattice_cutout.svg",
-                         "05_assets_vector/svg_wrappers/06_clean_engineering_cutout.svg"
-                     ],
-    "true_vectorized_candidates":  [
-
-                                   ],
-    "non_editable_or_limited_elements":  [
-                                             "Transparent PNG icon internals are not path-editable",
-                                             "SVG wrappers embed PNG data and are not true path vectors",
-                                             "Buggy Image2 master is kept only as audit/reference material"
-                                         ],
-    "source_to_output_mapping":  [
-                                     {
-                                         "source_element":  "Image2 multi-panel master reference",
-                                         "source_region":  "full image",
-                                         "final_element":  "native editable PPTX/SVG layout",
-                                         "final_path":  "06_editable_pptx/cross_domain_stress_figure.pptx; 07_svg_export/cross_domain_stress_figure.svg",
-                                         "editability":  "framework native editable, icon internals limited to transparent image assets"
-                                     },
-                                     {
-                                         "source_element":  "Image2 icon sheet",
-                                         "source_region":  "2x3 grid cells",
-                                         "final_element":  "six transparent domain icon assets",
-                                         "final_path":  "04_assets_cutout/transparent_png/",
-                                         "editability":  "transparent image assets"
-                                     }
-                                 ]
+{
+  "figure_slug": "cross_domain_stress_figure",
+  "mode": "prompt-to-figure regression; also includes image-to-editable source mapping reference",
+  "native_editable_elements": [
+    "PPTX/SVG section panels and headers",
+    "PPTX/SVG text labels including bilingual labels",
+    "PPTX/SVG arrows and connectors",
+    "PPTX/SVG route nodes and cards",
+    "PPTX/SVG figure title and footer"
+  ],
+  "transparent_image_assets": [
+    "04_assets_cutout/transparent_png/01_environment_sensor_cutout.png",
+    "04_assets_cutout/transparent_png/02_agriculture_plant_cutout.png",
+    "04_assets_cutout/transparent_png/03_medical_translation_cutout.png",
+    "04_assets_cutout/transparent_png/04_ai_chip_cutout.png",
+    "04_assets_cutout/transparent_png/05_materials_lattice_cutout.png",
+    "04_assets_cutout/transparent_png/06_clean_engineering_cutout.png"
+  ],
+  "svg_wrappers": [
+    "05_assets_vector/svg_wrappers/01_environment_sensor_cutout.svg",
+    "05_assets_vector/svg_wrappers/02_agriculture_plant_cutout.svg",
+    "05_assets_vector/svg_wrappers/03_medical_translation_cutout.svg",
+    "05_assets_vector/svg_wrappers/04_ai_chip_cutout.svg",
+    "05_assets_vector/svg_wrappers/05_materials_lattice_cutout.svg",
+    "05_assets_vector/svg_wrappers/06_clean_engineering_cutout.svg"
+  ],
+  "true_vectorized_candidates": [],
+  "non_editable_or_limited_elements": [
+    "Transparent PNG icon internals are not path-editable",
+    "SVG wrappers embed PNG data and are not true path vectors",
+    "Buggy Image2 master is kept only as audit/reference material"
+  ],
+  "source_to_output_mapping": [
+    {
+      "source_element": "Image2 multi-panel master reference",
+      "source_region": "full image",
+      "final_element": "native editable PPTX/SVG layout",
+      "final_path": "06_editable_pptx/cross_domain_stress_figure.pptx; 07_svg_export/cross_domain_stress_figure.svg",
+      "editability": "framework native editable, icon internals limited to transparent image assets"
+    },
+    {
+      "source_element": "Six independently generated no-text Image2 assets",
+      "source_region": "master-aligned target regions recorded in the full master_layout_manifest",
+      "final_element": "six transparent domain assets",
+      "final_path": "04_assets_cutout/transparent_png/",
+      "editability": "transparent image assets",
+      "region_granularity": "single semantic complex assets in the lightweight example; complete runs must split all independently placed visual sub-elements",
+      "master_visual_role": "domain visual regions in the selected Image2 master",
+      "asset_similarity_target": "same scientific role, similar viewpoint/proportions/style, no master pixels reused",
+      "coarse_asset_forbidden": true,
+      "parity_failure_reason": null,
+      "redo_required": false
+    }
+  ],
+  "reference_guided_asset_gate": {
+    "status": "passed in full package",
+    "note": "Generated complex assets must use prompts tied to the selected master/source role, style, viewpoint, proportions, and placement."
+  },
+  "no_coarse_asset_gate": {
+    "status": "passed in full package",
+    "note": "A few broad assets cannot substitute for a complete fine-region inventory."
+  },
+  "no_crop_gate": {
+    "status": "passed by design",
+    "note": "Complex visuals are represented by independently generated no-text transparent assets; the Image2 master is used only as a layout contract."
+  }
 }

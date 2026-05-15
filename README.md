@@ -21,10 +21,12 @@
 The core workflow stays intentionally strict:
 
 ```text
-Image2 visual master/assets -> transparent icon assets -> editable PPTX/SVG rebuild -> QA package
+Image2 visual master -> reference-guided single assets -> transparent assets -> editable PPTX/SVG rebuild -> QA package
 ```
 
 Image2 is used for visual exploration, master composition, and complex asset generation. The final deliverables are rebuilt with editable Presentation/SVG objects wherever practical. Text, arrows, boxes, connectors, panels, and labels are editable; complex scientific mini-illustrations are transparent image assets by default.
+
+After a master or source image is selected, the workflow switches into a **Reference-Guided Asset Factory**: every meaningful complex visual element, semantic symbol, and directional route symbol must be inventoried, regenerated as its own similar no-text asset when needed, background-removed, and placed back at the master/source bbox. The master/source is a layout and style contract, not a crop sheet, and a simplified same-topic redraw must fail QA.
 
 ### ✨ Highlights
 
@@ -34,9 +36,11 @@ Image2 is used for visual exploration, master composition, and complex asset gen
 | Image-to-editable | Start from an existing PNG/JPG/screenshot and rebuild it as editable PPTX/SVG. |
 | Preflight hook | Codex asks for mode, purpose, palette, output root, target standard, and editability boundaries before drawing. |
 | Editable framework | Text, arrows, panels, boxes, connectors, and layout structure are rebuilt as editable objects. |
-| Transparent assets | Complex icons are generated or extracted separately, background-removed, and placed back into the editable figure. |
+| Transparent assets | Complex icons are generated separately as no-text assets, background-removed, and placed back into the editable figure. |
+| Reference-guided assets | Complex assets are generated one semantic item at a time to match the selected master/source role, angle, style, and placement. |
+| Semantic and route coverage | Warning marks, result icons, vapor arrows, moisture bundles, curved cascade routes, and gradient transition arrows must be mapped or explicitly justified. |
 | Honest vector policy | SVG wrappers are not treated as true path vectors; real vectorized candidates are tracked separately. |
-| QA-first output | Every run records palette choices, asset sources, editability, known issues, and journal policy risks. |
+| Truthful QA gates | Fine-region, semantic-symbol, directional-route, no-coarse-asset, master-similarity, and no-crop gates must fail honestly when the preview diverges. |
 
 ### 🚀 Quick Start
 
@@ -76,7 +80,8 @@ Typical flow:
 ```text
 Drawing prompt
   -> Image2 visual master
-  -> separate icon/mini-illustration assets
+  -> fine-region inventory
+  -> reference-guided single icon/mini-illustration assets
   -> transparent cutouts
   -> editable PPTX/SVG reconstruction
   -> manifests and QA
@@ -87,7 +92,7 @@ Drawing prompt
 Use this mode when you already have a PNG/JPG/screenshot/reference diagram and want an editable version.
 
 ```text
-Use $scientific-figure-workflow to convert D:\path\figure.png into an editable flowchart. Extract or recreate the icons, remove their backgrounds, and export PPTX and SVG.
+Use $scientific-figure-workflow to convert D:\path\figure.png into an editable flowchart. Recreate matching no-text icons as transparent assets, then export PPTX and SVG.
 ```
 
 Typical flow:
@@ -95,13 +100,14 @@ Typical flow:
 ```text
 Source image
   -> content and layout understanding
-  -> icon crops or regenerated matching assets
+  -> fine-region inventory
+  -> reference-guided single generated matching assets
   -> transparent cutouts
   -> editable framework reconstruction
   -> manifests and QA
 ```
 
-The source image is used for understanding and alignment, not as the final flattened background.
+The source image is used for understanding and alignment, not as the final flattened background or as a source for cut-out assets.
 
 ### 🪝 Preflight Hook
 
@@ -158,7 +164,7 @@ Full package layout:
 00_request/           original request, preflight choices, mode
 01_inputs/            user source images, assets, notes
 02_image2_master/     Image2 master images and selected/rejected versions
-03_assets_raw/        raw generated icons, crops, and source assets
+03_assets_raw/        raw single generated no-text assets
 04_assets_cutout/     transparent PNG/WebP assets and alpha QA
 05_assets_vector/     SVG wrappers, vectorized candidates, comparisons
 06_editable_pptx/     final editable PPTX and PPTX validation
@@ -195,6 +201,8 @@ The lightweight example in [examples/lightweight](examples/lightweight) includes
 - an editability manifest
 - QA notes
 
+The Amazon regression example in [examples/amazon_regression_v2](examples/amazon_regression_v2) records the v2 Reference-Guided Asset Factory test for an Image2-to-editable mechanism figure. It includes the side-by-side master comparison, key manifests, QA notes, and a reproducible builder script, while omitting heavy generated deliverables.
+
 Large generated masters, complete PPTX/SVG deliverables, raw Image2 caches, transparent asset folders, and intermediate builds are intentionally excluded from the public example.
 
 ### ✅ Validation
@@ -215,9 +223,11 @@ The public example is lightweight by design, so these checks validate skill stru
 
 ### ⚠️ Limitations
 
-- Transparent PNG/WebP assets can be moved, scaled, cropped, and replaced, but their internal paths are not editable.
+- Transparent PNG/WebP assets can be moved, scaled, masked, and replaced, but their internal paths are not editable.
 - An SVG wrapper around a PNG/WebP asset is a scalable container, not a true editable path-vector icon.
 - Automatic vectorization is only appropriate for simple flat icons; complex scientific illustrations should usually remain transparent assets.
+- A few broad generated assets are not enough when the master/source contains independently meaningful clouds, routes, maps, legends, state tiles, warning icons, or result-card icons.
+- If `comparison_master_vs_editable.png` is visibly a same-topic redesign instead of a master-aligned rebuild, the package is not acceptable and the QA gates must be marked failed.
 - Image2 may generate unwanted text, pseudo-text, or imperfect chroma-key backgrounds. These issues must be fixed, replaced, or recorded in QA.
 - For real journal submission, always check the target journal or publisher policy before using AI-generated image assets in final artwork.
 
@@ -226,7 +236,7 @@ The public example is lightweight by design, so these checks validate skill stru
 Contributions are welcome when they preserve the core workflow and keep output traceable:
 
 ```text
-Image2 visual master/assets -> transparent assets -> editable PPTX/SVG rebuild -> QA package
+Image2 visual master -> reference-guided single assets -> transparent assets -> editable PPTX/SVG rebuild -> QA package
 ```
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) before opening changes.
@@ -244,10 +254,12 @@ MIT. See [LICENSE](LICENSE).
 它的核心流程保持不变：
 
 ```text
-Image2 视觉母版/资产 -> 透明图标资产 -> 可编辑 PPTX/SVG 重建 -> QA 工作包
+Image2 视觉母版 -> 参考母版逐元素资产 -> 透明资产 -> 可编辑 PPTX/SVG 重建 -> QA 工作包
 ```
 
 Image2 负责探索视觉风格、生成母版和复杂小图标资产；最终交付图由 Presentation/SVG 重新搭建。文字、箭头、面板、连接线、节点、标签等结构元素尽量保持可编辑；复杂科研小插图默认作为透明背景图片资产使用，不强行转成难看或失真的矢量路径。
+
+母版或源图一旦确定，workflow 必须进入 **Reference-Guided Asset Factory**：复杂视觉元素、语义小图标和方向路线图形都要逐项盘点；需要图像资产时，基于母版相似生成无文字单元素资产，再做透明背景处理并按母版 bbox 放回。母版/源图只作为布局和风格合同，不作为裁切素材。
 
 ### ✨ 核心亮点
 
@@ -257,9 +269,10 @@ Image2 负责探索视觉风格、生成母版和复杂小图标资产；最终�
 | Image-to-Editable | 从已有 PNG/JPG/截图理解内容，再重建为可编辑 PPTX/SVG。 |
 | 绘图前 Hook | 在真正制图前确认模式、用途、配色、输出目录、目标标准和可编辑边界。 |
 | 框架可编辑 | 文字、箭头、面板、框、连接线和整体布局用 PPTX/SVG 原生对象重建。 |
-| 图标透明资产 | 复杂图标单独生成或裁剪，抠成透明背景后放回最终图。 |
+| 图标透明资产 | 复杂图标单独生成无文字资产，抠成透明背景后放回最终图。 |
+| 语义符号与方向路线覆盖 | 警告符、结果卡片图标、蒸散发箭头、水汽箭头束、弧形级联路线和渐变转变箭头必须被识别、生成或明确例外。 |
 | 矢量边界清楚 | SVG wrapper 不冒充真正路径矢量；自动矢量化候选会单独记录。 |
-| QA 优先 | 每次输出都会记录配色、资产来源、可编辑性、已知问题和投稿政策风险。 |
+| QA 优先 | 每次输出都会记录资产来源、可编辑性、方向路线覆盖、母版相似度、已知问题和投稿政策风险。 |
 
 ### 🚀 快速开始
 
@@ -310,7 +323,7 @@ Copy-Item -Recurse .\skill\scientific-figure-workflow "$env:USERPROFILE\.codex\s
 适合你已有 PNG/JPG 流程图、截图或参考图，希望转换成可修改版本的情况。
 
 ```text
-用 $scientific-figure-workflow 把 D:\path\figure.png 转成可编辑流程图，提取其中图标并抠透明，输出 PPTX 和 SVG。
+用 $scientific-figure-workflow 把 D:\path\figure.png 转成可编辑流程图，重新生成匹配的无文字图标并抠透明，输出 PPTX 和 SVG。
 ```
 
 典型流程：
@@ -318,7 +331,7 @@ Copy-Item -Recurse .\skill\scientific-figure-workflow "$env:USERPROFILE\.codex\s
 ```text
 已有图片
   -> 理解内容和布局
-  -> 裁剪或再生成匹配图标
+  -> 单独生成匹配图标
   -> 透明抠图
   -> 可编辑框架重建
   -> manifest 和 QA
@@ -381,7 +394,7 @@ skill 内置几类适合科研图的配色：
 00_request/           原始需求、preflight 选择、模式记录
 01_inputs/            用户输入图片、已有资产、笔记
 02_image2_master/     Image2 母版、入选版本、失败或有问题版本
-03_assets_raw/        原始生成图标、裁剪图标、来源资产
+03_assets_raw/        原始单元素生成资产
 04_assets_cutout/     透明 PNG/WebP 资产和 alpha 检查
 05_assets_vector/     SVG wrapper、自动矢量化候选、对比记录
 06_editable_pptx/     最终可编辑 PPTX 和 PPTX 校验
@@ -418,6 +431,8 @@ _archive/             中间构建和丢弃版本
 - editability manifest
 - QA notes
 
+亚马逊回归示例位于 [examples/amazon_regression_v2](examples/amazon_regression_v2)，记录了 Reference-Guided Asset Factory 的 v2 回归测试，包含母版对比图、关键 manifests、QA notes 和可复现构建脚本，但不包含完整 PPTX/SVG、raw Image2 或透明资产大文件。
+
 为了避免仓库过大，完整 PPTX/SVG、原始 Image2 图、透明图标文件夹和中间构建文件没有放入公开示例。
 
 ### ✅ 验证方法
@@ -438,7 +453,7 @@ python -X utf8 C:\Users\Administrator\.codex\skills\.system\skill-creator\script
 
 ### ⚠️ 限制与投稿提醒
 
-- 透明 PNG/WebP 图标可以移动、缩放、裁剪和替换，但内部路径通常不可编辑。
+- 透明 PNG/WebP 图标可以移动、缩放、蒙版和替换，但内部路径通常不可编辑。
 - SVG wrapper 只是把 PNG/WebP 放入 SVG 容器，并不等于真正路径级可编辑矢量图。
 - 自动矢量化只适合简单扁平图标；复杂科研插图通常应保留为透明资产，避免失真。
 - Image2 可能生成错误文字、伪文字或不纯色背景；这些问题必须修复、替换，或在 QA 中披露。
@@ -449,7 +464,7 @@ python -X utf8 C:\Users\Administrator\.codex\skills\.system\skill-creator\script
 欢迎贡献，但请保持核心工作流不变，并保证输出可追踪：
 
 ```text
-Image2 视觉母版/资产 -> 透明资产 -> 可编辑 PPTX/SVG 重建 -> QA 工作包
+Image2 视觉母版 -> 参考母版逐元素资产 -> 透明资产 -> 可编辑 PPTX/SVG 重建 -> QA 工作包
 ```
 
 提交修改前请阅读 [CONTRIBUTING.md](CONTRIBUTING.md)。

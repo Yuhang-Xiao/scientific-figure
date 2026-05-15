@@ -1,0 +1,60 @@
+{
+  "figure_slug": "cross_domain_stress_figure",
+  "mode": "prompt-to-figure",
+  "public_example_note": "Lightweight example manifest; full coordinate inventory is produced in complete runs.",
+  "canvas": {
+    "aspect_ratio": "16:9",
+    "coordinate_status": "omitted from lightweight public example"
+  },
+  "structure_contract": {
+    "selected_master_role": "layout contract only",
+    "final_background_use": false,
+    "master_region_asset_reuse": false
+  },
+  "panel_structure": [
+    "multi-panel scientific workflow scaffold",
+    "bilingual section headers",
+    "native editable cards, arrows, route nodes, and footer"
+  ],
+  "text_zones": [
+    "figure title",
+    "panel headers",
+    "bilingual labels",
+    "footer"
+  ],
+  "fineRegions": [
+    {
+      "region_key": "domain_visual_assets",
+      "layout_role": "six complex domain visuals placed in master-aligned regions",
+      "implementation_type": "generated_matching_asset",
+      "region_granularity": "public example summary only; complete runs must list each semantic visual item separately",
+      "master_visual_role": "complex domain visuals in the selected Image2 master",
+      "asset_similarity_target": "match the selected master role, viewpoint, proportions, and placement without reusing master pixels",
+      "coarse_asset_forbidden": true,
+      "parity_failure_reason": null,
+      "redo_required": false
+    }
+  ],
+  "routeSegments": [
+    {
+      "route_key": "workflow_connectors",
+      "implementation_type": "route_geometry",
+      "parity_status": "native editable arrows and connectors"
+    }
+  ],
+  "legendItems": [
+    {
+      "legend_key": "cross_domain_roles",
+      "implementation_type": "native_text_and_vector",
+      "parity_status": "represented by editable labels and symbols"
+    }
+  ],
+  "smallIcons": [
+    {
+      "icon_key": "domain_icons",
+      "implementation_type": "generated_matching_asset",
+      "parity_status": "represented by independently generated transparent assets"
+    }
+  ],
+  "approved_deviations": []
+}

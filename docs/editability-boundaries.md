@@ -18,7 +18,17 @@ Keep these as transparent image assets by default:
 - Microscopy-like, anatomy-like, molecular, lab-equipment, sample, sensor, or organism illustrations.
 - Any visual whose beauty depends on Image2 texture, lighting, shading, or composition.
 
-Transparent asset means a PNG/WebP with an alpha channel. In PowerPoint it can be moved, scaled, rotated, replaced, and cropped, but its internal lines and fills are not individually editable.
+Transparent asset means a PNG/WebP with an alpha channel. In PowerPoint it can be moved, scaled, rotated, masked, and replaced, but its internal lines and fills are not individually editable.
+
+## Reference-Guided Boundary
+
+Once an Image2 master or source/reference image exists, the editability boundary must follow that visual contract.
+
+- Complex visual content is regenerated as matching transparent assets one semantic item at a time, using the master/source only as a reference for visual role, style, orientation, proportions, and placement.
+- Editable framework content stays native: title bars, numbered circles, labels, legends, frames, arrows, route paths, threshold lines, brackets, tables, charts, and conclusion boxes.
+- Do not replace a detailed master/source with a cleaner but structurally different native-vector redraw. Beauty does not excuse missing master elements.
+- Do not merge independently positioned master/source objects into one broad asset when doing so hides route marks, legends, cloud/rain groups, state tiles, or small icons.
+- Do not describe a transparent image or SVG wrapper as internally editable. It is movable/scalable/replaceable only.
 
 ## When Full Vector Editability Is Required
 

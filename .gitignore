@@ -5,9 +5,12 @@ scientific_figure_workflow_test/
 # Local Image2 / Codex caches
 generated_images/
 .codex/
+.codex_pydeps/
 *.tmp
 tmp/
 temp/
+__pycache__/
+*.pyc
 
 # Heavy generated deliverables are excluded from examples by default
 examples/**/*.pptx

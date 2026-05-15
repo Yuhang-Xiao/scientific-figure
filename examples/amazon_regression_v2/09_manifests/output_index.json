@@ -1,0 +1,21 @@
+{
+  "figure_slug": "amazon_deforestation_drought_threshold",
+  "mode": "prompt-to-figure regression v2",
+  "created_at": "2026-05-14T22:21:58",
+  "package_root": "examples/amazon_regression_v2",
+  "final_pptx": "06_editable_pptx/amazon_deforestation_drought_threshold.pptx (omitted from lightweight example)",
+  "final_svg": "07_svg_export/amazon_deforestation_drought_threshold.svg (omitted from lightweight example)",
+  "preview_pptx": "08_previews/preview_pptx.png (omitted from lightweight example)",
+  "preview_svg": "08_previews/preview_svg.png (omitted from lightweight example)",
+  "final_figure": "08_previews/final_figure.png (omitted from lightweight example)",
+  "comparison_master_vs_editable": "08_previews/comparison_master_vs_editable.png",
+  "selected_master": "02_image2_master/master_selected/image2_master_selected.png (omitted from lightweight example)",
+  "transparent_asset_dir": "04_assets_cutout/transparent_png/ (omitted from lightweight example)",
+  "asset_manifest": "09_manifests/asset_manifest.json",
+  "editability_manifest": "09_manifests/editability_manifest.json",
+  "master_layout_manifest": "09_manifests/master_layout_manifest.json",
+  "visual_diff_report": "09_manifests/visual_diff_report.json",
+  "qa_notes": "10_qa/QA_notes.md",
+  "known_issues": "10_qa/known_issues.md",
+  "public_example_note": "Lightweight tracked regression record. Full generated package is local-only under scientific_figure_workflow_test/ and ignored by git."
+}

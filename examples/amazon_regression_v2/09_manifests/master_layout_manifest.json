@@ -1,0 +1,419 @@
+{
+  "figure_slug": "amazon_deforestation_drought_threshold",
+  "mode": "prompt-to-figure regression v2",
+  "canvas": {
+    "width_px": 1920,
+    "height_px": 1080,
+    "aspect_ratio": "16:9"
+  },
+  "structure_contract": {
+    "selected_master": "02_image2_master/master_selected/image2_master_selected.png",
+    "used_as_final_background": false,
+    "master_regions_reused_as_assets": false,
+    "reference_guided_asset_factory": "required and executed for new v2 assets"
+  },
+  "panels": [
+    {
+      "key": "external_pressure",
+      "title": "外部压力",
+      "bbox": [
+        70,
+        145,
+        460,
+        700
+      ],
+      "title_bar_bbox": [
+        70,
+        145,
+        460,
+        52
+      ]
+    },
+    {
+      "key": "water_cycle_drought",
+      "title": "水分循环削弱与干旱增强",
+      "bbox": [
+        560,
+        145,
+        720,
+        700
+      ],
+      "title_bar_bbox": [
+        560,
+        145,
+        720,
+        52
+      ]
+    },
+    {
+      "key": "systemic_transition_risk",
+      "title": "系统性转变风险",
+      "bbox": [
+        1310,
+        145,
+        540,
+        700
+      ],
+      "title_bar_bbox": [
+        1310,
+        145,
+        540,
+        52
+      ]
+    }
+  ],
+  "textZones": {
+    "title": "毁林诱发干旱降低亚马逊森林气候临界阈值",
+    "left": "外部压力",
+    "mid": "水分循环削弱与干旱增强",
+    "right": "系统性转变风险",
+    "warming": "全球变暖\n1.5–1.9°C / 3.7–4.0°C",
+    "deforest": "毁林比例\n22–28%",
+    "intact": "完整森林",
+    "after": "毁林后",
+    "evap": "蒸散发",
+    "evap_down": "蒸散发下降",
+    "transport_strong": "水汽输送（强）",
+    "transport_weak": "水汽输送（减弱）",
+    "rain": "降水",
+    "rain_less": "降水减少",
+    "downwind": "下风向级联影响",
+    "cascade": "级联转变 / knock-on effects",
+    "stable": "稳定的热带雨林系统",
+    "degraded": "退化的生态系统",
+    "threshold": "临界阈值\n（转折点）",
+    "stable_state": "稳定雨林状态",
+    "degraded_state": "退化生态系统状态",
+    "warm_only": "仅全球变暖：临界阈值约 3.7–4.0°C",
+    "warm_def": "全球变暖 + 毁林：\n1.5–1.9°C 即可能触发近系统性转变",
+    "area": "潜在受影响面积：62–77%",
+    "conclusion": "控制全球升温低于 1.5°C、停止毁林并恢复退化森林，是降低亚马逊系统性转变风险的关键。"
+  },
+  "fineRegions": [
+    {
+      "key": "warming_earth_thermometer",
+      "layout_role": "全球变暖地球与温度计图标",
+      "implementation_type": "generated_matching_asset",
+      "master_region_bbox": [
+        115,
+        230,
+        270,
+        180
+      ],
+      "region_granularity": "single semantic complex asset",
+      "master_visual_role": "全球变暖地球与温度计图标",
+      "asset_similarity_target": "match selected Image2 master role, similar style/viewpoint/proportions, no master pixels reused",
+      "coarse_asset_forbidden": true,
+      "parity_failure_reason": null,
+      "redo_required": false
+    },
+    {
+      "key": "amazon_deforestation_map",
+      "layout_role": "亚马逊毁林扩张地图与农业/道路斑块",
+      "implementation_type": "generated_matching_asset",
+      "master_region_bbox": [
+        100,
+        535,
+        330,
+        230
+      ],
+      "region_granularity": "single semantic complex asset",
+      "master_visual_role": "亚马逊毁林扩张地图与农业/道路斑块",
+      "asset_similarity_target": "match selected Image2 master role, similar style/viewpoint/proportions, no master pixels reused",
+      "coarse_asset_forbidden": true,
+      "parity_failure_reason": null,
+      "redo_required": false
+    },
+    {
+      "key": "forest_evapotranspiration_scene",
+      "layout_role": "完整森林水分循环场景",
+      "implementation_type": "generated_matching_asset",
+      "master_region_bbox": [
+        715,
+        258,
+        235,
+        125
+      ],
+      "region_granularity": "single semantic complex asset",
+      "master_visual_role": "完整森林水分循环场景",
+      "asset_similarity_target": "match selected Image2 master role, similar style/viewpoint/proportions, no master pixels reused",
+      "coarse_asset_forbidden": true,
+      "parity_failure_reason": null,
+      "redo_required": false
+    },
+    {
+      "key": "deforested_agriculture_road_patch",
+      "layout_role": "毁林道路农业斑块与干旱区域",
+      "implementation_type": "generated_matching_asset",
+      "master_region_bbox": [
+        945,
+        470,
+        275,
+        160
+      ],
+      "region_granularity": "single semantic complex asset",
+      "master_visual_role": "毁林道路农业斑块与干旱区域",
+      "asset_similarity_target": "match selected Image2 master role, similar style/viewpoint/proportions, no master pixels reused",
+      "coarse_asset_forbidden": true,
+      "parity_failure_reason": null,
+      "redo_required": false
+    },
+    {
+      "key": "healthy_rainforest_state",
+      "layout_role": "稳定湿润雨林状态图",
+      "implementation_type": "generated_matching_asset",
+      "master_region_bbox": [
+        1360,
+        262,
+        240,
+        170
+      ],
+      "region_granularity": "single semantic complex asset",
+      "master_visual_role": "稳定湿润雨林状态图",
+      "asset_similarity_target": "match selected Image2 master role, similar style/viewpoint/proportions, no master pixels reused",
+      "coarse_asset_forbidden": true,
+      "parity_failure_reason": null,
+      "redo_required": false
+    },
+    {
+      "key": "degraded_savanna_state",
+      "layout_role": "退化稀树草原状态图",
+      "implementation_type": "generated_matching_asset",
+      "master_region_bbox": [
+        1610,
+        262,
+        210,
+        170
+      ],
+      "region_granularity": "single semantic complex asset",
+      "master_visual_role": "退化稀树草原状态图",
+      "asset_similarity_target": "match selected Image2 master role, similar style/viewpoint/proportions, no master pixels reused",
+      "coarse_asset_forbidden": true,
+      "parity_failure_reason": null,
+      "redo_required": false
+    },
+    {
+      "key": "rain_cloud",
+      "layout_role": "降雨云与雨线",
+      "implementation_type": "generated_matching_asset",
+      "master_region_bbox": [
+        1080,
+        230,
+        145,
+        90
+      ],
+      "region_granularity": "single semantic complex asset",
+      "master_visual_role": "降雨云与雨线",
+      "asset_similarity_target": "match selected Image2 master role, similar style/viewpoint/proportions, no master pixels reused",
+      "coarse_asset_forbidden": true,
+      "parity_failure_reason": null,
+      "redo_required": false
+    },
+    {
+      "key": "healthy_forest_panorama",
+      "layout_role": "母版上半完整森林河流横向场景",
+      "implementation_type": "generated_matching_asset",
+      "master_region_bbox": [
+        585,
+        238,
+        420,
+        170
+      ],
+      "region_granularity": "single semantic complex asset",
+      "master_visual_role": "母版上半完整森林河流横向场景",
+      "asset_similarity_target": "match selected Image2 master role, similar style/viewpoint/proportions, no master pixels reused",
+      "coarse_asset_forbidden": true,
+      "parity_failure_reason": null,
+      "redo_required": false
+    },
+    {
+      "key": "deforested_dry_panorama",
+      "layout_role": "母版下半毁林道路干旱横向场景",
+      "implementation_type": "generated_matching_asset",
+      "master_region_bbox": [
+        585,
+        480,
+        455,
+        150
+      ],
+      "region_granularity": "single semantic complex asset",
+      "master_visual_role": "母版下半毁林道路干旱横向场景",
+      "asset_similarity_target": "match selected Image2 master role, similar style/viewpoint/proportions, no master pixels reused",
+      "coarse_asset_forbidden": true,
+      "parity_failure_reason": null,
+      "redo_required": false
+    },
+    {
+      "key": "cascade_amazon_map",
+      "layout_role": "底部级联影响亚马逊地图",
+      "implementation_type": "generated_matching_asset",
+      "master_region_bbox": [
+        590,
+        696,
+        505,
+        128
+      ],
+      "region_granularity": "single semantic complex asset",
+      "master_visual_role": "底部级联影响亚马逊地图",
+      "asset_similarity_target": "match selected Image2 master role, similar style/viewpoint/proportions, no master pixels reused",
+      "coarse_asset_forbidden": true,
+      "parity_failure_reason": null,
+      "redo_required": false
+    },
+    {
+      "key": "conservation_leaf_shield",
+      "layout_role": "底部结论保护叶盾图标",
+      "implementation_type": "generated_matching_asset",
+      "master_region_bbox": [
+        118,
+        925,
+        72,
+        72
+      ],
+      "region_granularity": "single semantic complex asset",
+      "master_visual_role": "底部结论保护叶盾图标",
+      "asset_similarity_target": "match selected Image2 master role, similar style/viewpoint/proportions, no master pixels reused",
+      "coarse_asset_forbidden": true,
+      "parity_failure_reason": null,
+      "redo_required": false
+    }
+  ],
+  "routeSegments": [
+    {
+      "key": "left_to_mid_blue_arrow",
+      "start": [
+        530,
+        470
+      ],
+      "end": [
+        560,
+        470
+      ],
+      "implementation_type": "native_vector",
+      "stroke": "blue solid"
+    },
+    {
+      "key": "mid_to_right_red_arrow",
+      "start": [
+        1280,
+        470
+      ],
+      "end": [
+        1310,
+        470
+      ],
+      "implementation_type": "native_vector",
+      "stroke": "red solid"
+    },
+    {
+      "key": "top_moisture_transport",
+      "start": [
+        850,
+        262
+      ],
+      "end": [
+        1010,
+        286
+      ],
+      "implementation_type": "native_vector",
+      "stroke": "blue solid"
+    },
+    {
+      "key": "weakened_moisture_transport",
+      "start": [
+        850,
+        505
+      ],
+      "end": [
+        1010,
+        520
+      ],
+      "implementation_type": "native_vector",
+      "stroke": "blue dashed"
+    },
+    {
+      "key": "downwind_cascade",
+      "start": [
+        650,
+        655
+      ],
+      "end": [
+        1200,
+        655
+      ],
+      "implementation_type": "route_geometry",
+      "stroke": "red solid arrow"
+    },
+    {
+      "key": "map_cascade_routes",
+      "start": [
+        640,
+        815
+      ],
+      "end": [
+        980,
+        728
+      ],
+      "implementation_type": "route_geometry",
+      "stroke": "red dashed multi-route"
+    }
+  ],
+  "legendItems": [
+    {
+      "key": "left_amazon_map_legend",
+      "implementation_type": "native_text_and_vector",
+      "items": [
+        "原生森林",
+        "毁林区域",
+        "道路/基础设施",
+        "农业扩张"
+      ]
+    }
+  ],
+  "smallIcons": [
+    {
+      "key": "left_number_badges",
+      "implementation_type": "native_vector",
+      "bbox": [
+        94,
+        202,
+        38,
+        323
+      ]
+    },
+    {
+      "key": "threshold_warning_and_line",
+      "implementation_type": "native_vector",
+      "bbox": [
+        1560,
+        252,
+        40,
+        278
+      ]
+    },
+    {
+      "key": "result_card_icons",
+      "implementation_type": "generated_matching_asset_reuse",
+      "bbox": [
+        1342,
+        608,
+        58,
+        210
+      ]
+    },
+    {
+      "key": "conclusion_leaf_shield",
+      "implementation_type": "generated_matching_asset",
+      "bbox": [
+        118,
+        925,
+        72,
+        72
+      ]
+    }
+  ],
+  "approved_deviations": [
+    "V2 improves layout parity and still uses some previously generated matching assets where their role matches the selected master."
+  ],
+  "public_example_note": "Lightweight regression manifest copied from the complete local v2 package. Large Image2 masters and generated assets are intentionally omitted."
+}

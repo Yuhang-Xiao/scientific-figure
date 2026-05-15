@@ -4,7 +4,9 @@ Use this reference when the user asks for icon internals to be editable or when 
 
 ## Default
 
-Keep complex scientific icons and mini-illustrations as transparent PNG/WebP assets. They are movable, scalable, crop-able, and replaceable in PPTX, but their internal paths are not editable.
+Keep complex scientific icons and mini-illustrations as transparent PNG/WebP assets. They are movable, scalable, maskable, and replaceable in PPTX, but their internal paths are not editable.
+
+Do not use hand-built or auto-vectorized artwork as a shortcut around the Reference-Guided Asset Factory. If a complex visual region in the selected master/source is not simple flat line art, generate a matching no-text transparent asset and place it back at the master/source bbox.
 
 ## Candidate Tools
 
@@ -21,6 +23,8 @@ Attempt vectorization only when all are true:
 - the result can remain visually close to the source or Image2 master;
 - path complexity will not make the PPTX slow or fragile;
 - the user asked for internal editability or the project requires it.
+
+Vectorization fails QA when it produces a prettier but structurally different object, drops semantic detail from the master/source, or causes the final preview to fail the master similarity gate.
 
 ## Output Placement
 

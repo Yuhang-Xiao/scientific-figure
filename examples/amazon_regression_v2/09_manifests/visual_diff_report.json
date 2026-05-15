@@ -1,0 +1,21 @@
+{
+  "figure_slug": "amazon_deforestation_drought_threshold",
+  "layout_parity_gate": "passed",
+  "content_parity_gate": "passed",
+  "asset_parity_gate": "passed",
+  "route_arrow_parity_gate": "passed",
+  "small_icon_legend_parity_gate": "passed",
+  "fine_region_coverage_gate": "passed",
+  "no_coarse_asset_gate": "passed",
+  "reference_guided_asset_gate": "passed",
+  "master_similarity_gate": "passed with known v2 visual approximation; closer than v1 and preserves title bars, subpanels, legends, routes, result cards, and conclusion icon",
+  "truthful_qa_gate": "passed with known deviations recorded",
+  "no_crop_gate": "passed",
+  "parity_failure_reason": null,
+  "redo_required": false,
+  "comparison_preview": "08_previews/comparison_master_vs_editable.png",
+  "unresolved_issues": [
+    "This regression v2 improves layout parity but is still not a pixel clone; complex asset textures can differ because assets are newly generated, not cropped from the master."
+  ],
+  "public_example_note": "Comparison preview is included; full editable package remains in the ignored local test directory."
+}

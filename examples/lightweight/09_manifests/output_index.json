@@ -1,4 +1,4 @@
-﻿{
+{
     "figure_slug":  "cross_domain_stress_figure",
     "mode":  "prompt-to-figure",
     "package_root":  "examples/lightweight",
@@ -14,10 +14,12 @@
     "transparent_asset_dir":  "04_assets_cutout/transparent_png/",
     "asset_manifest":  "09_manifests/asset_manifest.json",
     "editability_manifest":  "09_manifests/editability_manifest.json",
+    "master_layout_manifest":  "09_manifests/master_layout_manifest.json",
+    "visual_diff_report":  "09_manifests/visual_diff_report.json",
     "qa_notes":  "10_qa/QA_notes.md",
     "known_issues":  [
                          "Image2 master contains unwanted generated text and is not used as final background",
-                         "Image2 icon sheet required robust chroma cleanup because background was not perfectly flat",
+                         "Some independently generated no-text assets required robust chroma cleanup because backgrounds were not perfectly flat",
                          "Transparent PNG assets are not path-editable; SVG wrappers are containers only"
                      ]
 }

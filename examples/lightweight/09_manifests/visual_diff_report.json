@@ -1,0 +1,21 @@
+{
+  "figure_slug": "cross_domain_stress_figure",
+  "public_example_note": "Lightweight public example; full pixel diff is omitted with the large raw master and final deliverables.",
+  "layout_parity_gate": "passed in full package",
+  "content_parity_gate": "passed in full package",
+  "asset_parity_gate": "passed by independently generated matching transparent assets",
+  "route_arrow_parity_gate": "passed in full package",
+  "small_icon_legend_parity_gate": "passed in full package",
+  "fine_region_coverage_gate": "passed in full package; lightweight example summarizes the inventory",
+  "no_coarse_asset_gate": "passed in full package; broad regions are not accepted as substitutes for semantic sub-elements",
+  "reference_guided_asset_gate": "passed in full package; generated assets use master-role-guided prompts",
+  "master_similarity_gate": "passed in full package",
+  "truthful_qa_gate": "passed; failures must be recorded with parity_failure_reason and redo_required=true",
+  "no_crop_gate": "passed by design",
+  "parity_failure_reason": null,
+  "redo_required": false,
+  "comparison_preview": "08_previews/comparison_master_vs_editable.png",
+  "unresolved_issues": [
+    "Large raw master and final editable deliverables are omitted from this lightweight public example."
+  ]
+}
